@@ -1,0 +1,42 @@
+@import 'variables';
+.postContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.postImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.postImage:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  z-index: 1;
+}
+.postContent > p {
+  padding: 5px 10px;
+  margin: 0px;
+}
+
+.text {
+  padding: 14px 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .tags{
+    color: #4D5BCB;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .postImage:hover {
+    transform: none;
+    cursor: default;
+    z-index: 0;
+  }
+}

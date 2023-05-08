@@ -1,0 +1,66 @@
+@import "colors";
+@import "variables";
+.navBar {
+  background-color: $navColor;
+  width: 100%;
+  height: $navHeight;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: $navHeight;
+}
+
+
+.desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.mobile {
+  visibility: hidden;
+  display: none;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navLabel{
+  margin-left: 15px;
+}
+.header {
+  background: linear-gradient(to right, #0bbb37 0%, #5e4000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .navBar {
+    background-color: $navColor;
+    width: 100%;
+    height: $navHeight;
+    position: fixed;
+    z-index: 100;
+    top: auto;
+    bottom: 0;
+  }
+  .container {
+    margin-bottom: 0;
+  }
+  .desktop {
+    visibility: hidden;
+    display: none;
+    position: fixed;
+  }
+  .mobile {
+    display: flex;
+    visibility: visible;
+    position: relative;
+  }
+}
